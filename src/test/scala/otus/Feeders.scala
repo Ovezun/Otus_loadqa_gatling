@@ -11,5 +11,7 @@ object Feeders {
 
   val users: BatchableFeederBuilder[String] = csv("user.csv").circular
 
+  val passenger = csv("passengers.csv").circular
+
 
 }
