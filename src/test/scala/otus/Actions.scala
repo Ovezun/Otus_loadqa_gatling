@@ -121,7 +121,7 @@ object Actions {
         "buyFlights.y" -> 6
     )
 
-    val buyTicketStep3 = http("input Credit Card ")
+    val buyTicketStep3 = http("input Credit Card #{creditCard}")
       .post("/cgi-bin/reservations.pl")
       .headers(params)
       .formParamMap(payload3)
