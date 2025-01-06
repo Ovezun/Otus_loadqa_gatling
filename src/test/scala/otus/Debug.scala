@@ -52,7 +52,8 @@ class Debug extends Simulation {
 //      constantUsersPerSec(16.toInt) during 3600,
 
 //    )
-    ).protocols(httpProtocol.proxy(Proxy("localhost", 8080)) )
+    ).protocols(httpProtocol)
+//    ).protocols(httpProtocol.proxy(Proxy("localhost", 8080)) )
     .assertions(global.failedRequests.percent.is(0))
     .assertions(global.responseTime.percentile3.lt(35000))
     .assertions(global.responseTime.max.lt(50000))
